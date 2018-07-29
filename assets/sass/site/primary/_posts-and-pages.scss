@@ -1,0 +1,479 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+section.overview {
+	width: 100%;
+	float: left;
+	border-top: 8px solid $color-light-blue;
+	.the-overview {
+		width: 100%;
+		padding: 40px 10%;
+		color: $color-orange;
+		line-height: 2.3;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+		}
+	}
+	.umbrella {
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+section.whatwedo {
+	width: 100%;
+	float: left;
+	background-color: $color-peach;
+	padding: 3%;
+	.challenge,
+	.response {
+		width: 90%;
+		margin: 20px auto;
+		text-align: center;
+		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			width: 48%;
+			margin: 0;
+		}
+		header.title {
+			text-align: center;
+			padding:0;
+			position: absolute;
+			z-index: 20;
+			width: 100%;
+			top: 0;
+			height: 25%;
+			left: 0;
+			color: #fff;
+			h2 {
+				margin: 0;
+				.small {
+					font-size: 24px;
+				}
+				font-size: 40px;
+			}
+		}
+		.image {
+			width: 100%;
+			position: relative;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			img {
+				width: 100%;
+			}
+		}
+		.copy {
+			width: 100%;
+			float: left;
+			color: #fff;
+			position: absolute;
+			z-index: 20;
+			bottom: 0;
+			height: 75%;
+			left: 0;
+			padding: 30px 20px;
+			line-height: 2;
+		}
+		
+	}
+	.challenge {
+		@media screen and (min-width: $tabwidth) {
+			float: left;
+		}
+		header.title {
+			background-color: $color-dark-blue;
+		}
+		.copy {
+			background-color: rgba($color-dark-blue, .7);
+		}
+	}
+	.response {
+		@media screen and (min-width: $tabwidth) {
+			float: right;
+		}
+		header.title {
+			background-color: $color-orange;
+		}
+		.copy {
+			background-color: rgba($color-orange, .7);
+		}
+	}
+}
+section.mission, 
+section.vision
+{
+	width: 100%;
+	position: relative;
+	float: left;
+	margin: 0 0 60px 0;
+	.image,
+	article.info {
+		width: 100%;
+		overflow: hidden;
+		color: $color-dark-blue;
+		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+		}
+		h1 {
+			color: $color-orange;
+			text-transform: uppercase;
+		}
+	}
+	.padding {
+		padding: 5%;
+	}
+	.image {
+		line-height: 0;
+	}
+	article.info {
+		&.left {
+			text-align: left;
+		}
+		&.right {
+			text-align: right;
+		}
+	}
+}
+section.mission
+{
+	.image {
+		border-radius: 0 60px 0 0;
+		overflow: hidden;
+		@media screen and (min-width: $tabwidth) {
+			
+		}
+	}
+	article.info {
+		@media screen and (min-width: $tabwidth) {
+
+		}
+		&:after {
+			width: 90%;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			border-bottom: 2px solid $color-yellow;
+		}
+	}
+}
+.vision
+{
+	.image {
+		border-radius: 60px 0 0 0;
+		@media screen and (min-width: $tabwidth) {
+			
+		}
+	}
+	article.info {
+		
+		@media screen and (min-width: $tabwidth) {
+
+		}
+		&:after {
+			width: 90%;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-bottom: 2px solid $color-yellow;
+		}
+	}
+}
+.about-mid {
+	width: 100%;
+	float: left;
+	.the-overview {
+		width: 100%;
+		padding: 10px 3%;
+		color: $color-dark-blue;
+		line-height: 1.8;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+		}
+	}
+	.umbrella {
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+section.our-program {
+	width: 100%;
+	float: left;
+	position: relative;
+	.image {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		float: left;
+		line-height: 0;
+		z-index: 20;
+		img {
+			width: 100%;
+		}
+	}
+	article.program-contents {
+		width: 90%;
+		background-color: #fff;
+		color: $color-dark-blue;
+		position: relative;
+		z-index: 40;
+		h1, h2 {
+			color: $color-orange;
+			margin: 0;
+		}
+		h1 {
+			font-size: 30px;
+		}
+		h2 {
+			font-size: 18px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			position: absolute;
+			right: 0;
+			top: 20%;
+			text-align: right;
+			padding: 20px 5% 0 2%;
+		}
+
+
+	}
+}
+section.our-staff {
+	width: 100%;
+	float: left;
+	position: relative;
+	padding: 60px 0;
+	.staff-push {
+		width: 100%;
+		padding: 60px 0;
+	}
+	.staff-member {
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			width: 75%;
+		}
+		.staff-photo {
+			width: 90%;
+			margin: 0 auto;
+			@media screen and (min-width: $tabwidth) {
+				width: 40%;
+				float: left;
+				margin: 0 5% 0 0;
+			}
+			img {
+				width: 100%;
+			}
+		}
+		.staff-info {
+			width: 90%;
+			margin: 0 auto;
+			text-align: left;
+			@media screen and (min-width: $tabwidth) {
+				width: 55%;
+				float: left;
+			}
+			h2 {
+				color: $color-orange;
+				margin: 0;
+			}
+			.info {
+				width: 100%;
+				margin: 10px 0;
+				float: left;
+			}
+			.title {
+				color: $color-dark-blue;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.bod {
+		width: 100%;
+		background-color: $color-baby-blue;
+		@media screen and (min-width: $tabwidth) {
+			width: 25%;
+			float: left;
+		}
+		.list {
+			padding: 20px;
+			width: 100%;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		li {
+			color: $color-dark-blue;
+			text-transform: uppercase;
+			font-size: 12px;
+			margin: 0 0 5px 0;
+		}
+		h2 {
+			display: block;
+			width: 100%;
+			background-color: $color-orange;
+			color: #fff;
+			margin: 0;
+			text-align: center;
+
+		}
+	}
+}
+article.challenge, article.response {
+	width: 100%;
+	position: relative;
+	margin: 0 0 60px 0;
+	overflow: hidden;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	h1 {
+		color: $color-orange;
+	}
+	.copy {
+		width: 100%;
+		color: $color-dark-blue;
+		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			width: 45%;
+			
+		}
+	}
+	.image {
+		width: 100%;
+		overflow: hidden;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.strategies {
+		width: 100%;
+		float: left;
+		position: relative;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		li {
+			margin: 0 0 5px 0;
+			width: 100%;
+			overflow: hidden;
+		}
+		.numbox {
+			padding: 5px 10px;
+			color: #fff;
+			background-color: $color-orange;
+			border-radius: 0 5px 0 0 ;
+			text-align: center;
+			float: left;
+			margin: 0 5px 0 0;
+		}
+		.strat {
+			color: $color-orange;
+			width: auto;
+			float: left;
+			line-height: 2;
+		}
+	}
+}
+article.challenge {
+	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	.copy {
+		@media screen and (min-width: $tabwidth) {
+			padding: 0  5% 0 0;
+			margin: 0 0 0 5%;
+			float: left;
+			&:after {
+				width: 90%;
+				content: '';
+				position: absolute;
+				border-bottom: 2px solid $color-yellow;
+				left: 0;
+				bottom: 0;
+			}
+		}
+		blockquote {
+			width: 100%;
+			padding: 20px;
+			background-color: $color-dark-blue;
+			color: #fff;
+			margin: 0;
+		}
+	}
+	.image {
+		@media screen and (min-width: $tabwidth) {
+			border-radius: 60px 0 0 0;
+			float: left;
+		}
+	}
+}
+article.response {
+	
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	.copy {
+		@media screen and (min-width: $tabwidth) {
+			padding: 0 0 0 5%;
+			margin: 0 5% 0 0;
+			float: right;
+		}
+	}
+	.image {
+		@media screen and (min-width: $tabwidth) {
+			border-radius: 0 60px 0 0;
+			float: left;
+		}
+	}
+}
+
+
+
+
+

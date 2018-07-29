@@ -1,0 +1,163 @@
+.donate {
+	width: auto;
+	position: relative;
+	z-index: 10000;
+	@media screen and (min-width: $tabwidth) {
+		position: fixed;
+		top: 0;
+		right: 5%;
+
+	}
+	a {
+		padding: 10px 20px;
+		border-radius: 0 0 10px 10px;
+		display: block;
+		background-color: $color-orange;
+		color: #fff;
+		font-size: 30px;
+		text-decoration: none;
+	}
+}
+.clear {clear: both;}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1200px;
+		padding: 0px;
+	}
+}
+#masthead {
+	padding: 40px 0;
+}
+.headerflex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo , h1.logo {
+	width: 300px;
+	background-image: url(images/logo.png);	
+	margin: 10px auto;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 300px;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.logo a, h1.logo a {
+	width: 300px;
+	display: block;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 300px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.home-slider {
+	width: 100%;
+
+}
+.site-footer {
+	width: 100%;
+	clear: both;
+	background-color: $color-yellow;
+	color: #fff;
+	float: left;
+	text-align: center;
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+.button {
+	width: auto;
+	display: inline-block;
+	position: relative;
+	z-index: 30;
+	margin: 10px auto;
+	a {
+		padding: 3px 30px;
+		text-decoration: none;
+		display: block;
+		color: #fff;
+		background-color: $color-yellow;
+		@include transition(all ease .1s);
+		transform: scale(1);
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+section.signup {
+	background-color: $color-dark-blue;
+	padding: 20px;
+	width: 100%;
+	float: left;
+	text-align: center;
+	color: #fff;
+}
+header.page {
+	width: 100%;
+	position: relative;
+	z-index: 5;
+	text-align: center;
+	&:after {
+		width: 100%;
+		content: '';
+		position: absolute;
+		border-bottom: 3px solid $color-yellow;
+		bottom: 50%;
+		left: 0;
+	}
+	h1 {
+		width: auto;
+		padding: 0 30px;
+		color: $color-orange;
+		background-color: #fff;
+		position: relative;
+		z-index: 6;
+		margin: 0 auto;
+		display: inline-block;
+	}
+}
