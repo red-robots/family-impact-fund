@@ -26,9 +26,11 @@ get_header(); ?>
 
 			?>
 			<article class="page about">
-				<header class="page">
-					<h1><?php the_title(); ?></h1>
-				</header>
+				<div class="wrapper">
+					<header class="page">
+						<h1><?php the_title(); ?></h1>
+					</header>
+				</div>
 				<?php //the_content(); ?>
 
 			</article>

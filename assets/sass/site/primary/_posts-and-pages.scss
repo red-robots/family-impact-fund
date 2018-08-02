@@ -87,6 +87,7 @@ section.whatwedo {
 			bottom: 0;
 			left: 0;
 			z-index: 1;
+			line-height: 0;
 			img {
 				width: 100%;
 			}
@@ -148,6 +149,17 @@ section.vision
 		h1 {
 			color: $color-orange;
 			text-transform: uppercase;
+			font-size: 24px;
+			margin: 20px 0 5px 0;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 24px;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 30px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 40px;
+			}
 		}
 	}
 	.padding {
@@ -159,9 +171,16 @@ section.vision
 	article.info {
 		&.left {
 			text-align: left;
+			@media screen and (min-width: $tabwidth) {
+				padding-right: 5%;
+			}
 		}
 		&.right {
-			text-align: right;
+			
+			@media screen and (min-width: $tabwidth) {
+				padding-left: 5%;
+				text-align: right;
+			}
 		}
 	}
 }
@@ -258,10 +277,28 @@ section.our-program {
 			margin: 0;
 		}
 		h1 {
-			font-size: 30px;
+			color: $color-orange;
+			text-transform: uppercase;
+			font-size: 24px;
+			margin: 20px 0px 0;
+			line-height: 1;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 24px;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 30px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 40px;
+			}
 		}
 		h2 {
 			font-size: 18px;
+			font-style: italic;
+			margin: 0 0 10px 0;
+			@media screen and (min-width: $deskwidth) {
+				font-size: 22px;
+			}
 		}
 		@media screen and (min-width: $tabwidth) {
 			width: 50%;
@@ -305,6 +342,7 @@ section.our-staff {
 			width: 90%;
 			margin: 0 auto;
 			text-align: left;
+			color: $color-light-blue;
 			@media screen and (min-width: $tabwidth) {
 				width: 55%;
 				float: left;
@@ -312,15 +350,22 @@ section.our-staff {
 			h2 {
 				color: $color-orange;
 				margin: 0;
+				text-transform: uppercase;
+				font-size: 20px;
 			}
 			.info {
 				width: 100%;
 				margin: 10px 0;
 				float: left;
+				font-size: 14px;
 			}
 			.title {
 				color: $color-dark-blue;
 				margin-bottom: 10px;
+			}
+			a {
+				color: $color-light-blue;
+				text-decoration: none;
 			}
 		}
 	}
@@ -353,6 +398,8 @@ section.our-staff {
 			color: #fff;
 			margin: 0;
 			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
 
 		}
 	}
@@ -367,6 +414,28 @@ article.challenge, article.response {
 	}
 	h1 {
 		color: $color-orange;
+		text-transform: uppercase;
+		font-size: 24px;
+		margin: 20px 0px 0 0;
+		line-height: 1;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 24px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 30px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 40px;
+		}
+		.small {
+			font-size: 22px;
+			font-style: italic;
+			line-height: 1;
+			text-transform: capitalize;
+			margin: 0px 0 20px 0;
+			clear: both;
+			width: 100%;
+		}
 	}
 	.copy {
 		width: 100%;
@@ -380,6 +449,7 @@ article.challenge, article.response {
 	.image {
 		width: 100%;
 		overflow: hidden;
+		line-height: 0;
 		@media screen and (min-width: $tabwidth) {
 			width: 50%;
 			float: left;
@@ -454,11 +524,14 @@ article.challenge {
 	}
 }
 article.response {
+	text-align: right;
 	
+	font-size: 20px;
 	@media screen and (min-width: $tabwidth) {
 
 	}
 	.copy {
+		color: $color-orange;
 		@media screen and (min-width: $tabwidth) {
 			padding: 0 0 0 5%;
 			margin: 0 5% 0 0;
@@ -470,6 +543,12 @@ article.response {
 			border-radius: 0 60px 0 0;
 			float: left;
 		}
+	}
+	blockquote {
+		padding: 0;
+		margin: 0;
+		color: $color-dark-blue;
+		font-size: 16px;
 	}
 }
 

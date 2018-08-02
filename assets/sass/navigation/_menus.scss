@@ -4,7 +4,7 @@
 	text-align: center;
 	width: 100%;
 	background-color: #fff;
-	@media screen and (min-width: $tabwidth) {
+	@media screen and (min-width: $midwidth) {
 		clear: none;
 		width: auto;
 		
@@ -96,12 +96,13 @@
 		hyphens: none;
 		padding: 0 ;
 		// text-transform: uppercase;
-		font-family: $font-heading;
+		font-family: $font-copy;
 		font-weight: 300;
 		width: 100%;
+		font-size: 14px;
 		@media screen and (min-width: $tabwidth) {
 			// border-left: 1px solid #000;
-			line-height: 3;
+			line-height: 2;
 			width: auto;
 			// padding: 0 20px;
 			&:first-of-type {
@@ -121,13 +122,13 @@
 		// align-items: center;
 		text-decoration: none;
 		padding: 10px 0px;
-		color: $color-light-blue;
+		color: $color-dark-blue;
 		@include transition(all ease .4s);
 		@media screen and (min-width: $tabwidth) {
 			padding: 0% 20px;
 		}
 		@media screen and (min-width: $deskwidth) {
-			padding: 0% 30px;
+			// padding: 0% 30px;
 		}
 		&:hover {
 			background-color: rgba($color-yellow, 1);
@@ -165,7 +166,7 @@
 button.menu-toggle {
 	border: 0px;
 	text-shadow: none;
-	background-color: #ccc;
+	background-color: $color-light-blue;
 	color: #fff;
 	box-shadow: none;
 	width: auto;

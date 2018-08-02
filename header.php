@@ -19,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Arimo|Cormorant+Garamond:300,400,600" rel="stylesheet">
 
 
 <?php wp_head(); ?>

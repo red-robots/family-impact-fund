@@ -21,9 +21,11 @@ get_header(); ?>
 				$our_response_image = get_field('our_response_image');
 			?>
 			<article class="page">
-				<header class="page">
-					<h1><?php the_title(); ?></h1>
-				</header>
+				<div class="wrapper">
+					<header class="page">
+						<h1><?php the_title(); ?></h1>
+					</header>
+				</div>
 			</article>
 
 
@@ -31,7 +33,7 @@ get_header(); ?>
 				<div class="copy  js-titles">
 					<h1>
 					Our Community<br>
-					<span class="small">The Challenge</span>
+					<div class="small">The Challenge</div>
 					</h1>
 					<?php echo $challenge_overview; ?>
 					<div class="strategies">
@@ -63,8 +65,8 @@ get_header(); ?>
 			<article class="response">
 				<div class="copy">
 					<h1>
-						Our Organization<br>
-						<span class="small">The Response</span>
+						Our Organization
+						<div class="small">The Response</div>
 					</h1>
 					<?php echo $challenge_overview; ?>
 				</div>
