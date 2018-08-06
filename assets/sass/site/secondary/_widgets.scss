@@ -1,8 +1,31 @@
 .widget {
 	margin: 0 0 1.5em;
-
+	clear: both;
+	@media screen and (min-width: $tabwidth) {
+		clear: none;
+	}
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+	h2 {
+		width: 100%;
+		padding: 5%;
+		background-color: $color-orange;
+		color: #fff;
+		margin: 0 0 20px 0;
+	}
+	ul {
+		list-style-type: none;
+
+	}
+	a {
+		text-decoration: none;
+		color: $color-dark-blue;
+		@include transition(all ease .2s);
+		&:hover {
+			color: $color-orange;
+		}
+	}
+	border: 1px solid $color-yellow;
 }

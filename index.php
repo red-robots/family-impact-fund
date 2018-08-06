@@ -53,10 +53,10 @@ get_header(); ?>
 			</div><!-- home slider -->
 
 			<section class="overview">
-				<div class="the-overview">
+				<div class="the-overview js-blocks">
 					<?php echo $overview; ?>
 				</div>
-				<div class="umbrella">
+				<div class="umbrella js-blocks">
 					<img src="<?php bloginfo('template_url'); ?>/images/umbrella.png">
 				</div>
 			</section>
@@ -72,7 +72,7 @@ get_header(); ?>
 					<div class="copy">
 						<?php echo $challenge_text; ?>
 						<div class="button">
-							<a href="<?php echo $challenge_link; ?>">Learn More</a>
+							<a href="<?php echo $challenge_link; ?>#challenge">Learn More</a>
 						</div>
 					</div>	
 					
@@ -87,7 +87,7 @@ get_header(); ?>
 					<div class="copy">
 						<?php echo $response_text; ?>
 						<div class="button">
-							<a href="<?php echo $response_link; ?>">Learn More</a>
+							<a href="<?php echo $response_link; ?>#response">Learn More</a>
 						</div>
 					</div>	
 					
@@ -102,5 +102,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

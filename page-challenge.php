@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<article class="challenge">
 				<div class="copy  js-titles">
-					<h1>
+					<h1 id="challenge">
 					Our Community<br>
 					<div class="small">The Challenge</div>
 					</h1>
@@ -64,14 +64,14 @@ get_header(); ?>
 
 			<article class="response">
 				<div class="copy">
-					<h1>
+					<h1 id="response">
 						Our Organization
 						<div class="small">The Response</div>
 					</h1>
-					<?php echo $challenge_overview; ?>
+					<?php echo $our_response_overview; ?>
 				</div>
 				<div class="image">
-					<img src="<?php echo $challenge_image['url']; ?>" alt="<?php echo $challenge_image['alt']; ?>">
+					<img src="<?php echo $our_response_image['url']; ?>" alt="<?php echo $our_response_image['alt']; ?>">
 				</div>
 			</article>
 

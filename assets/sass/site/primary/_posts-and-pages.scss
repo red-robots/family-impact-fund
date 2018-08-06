@@ -32,9 +32,12 @@ section.overview {
 	border-top: 8px solid $color-light-blue;
 	.the-overview {
 		width: 100%;
-		padding: 40px 10%;
+		padding: 20px 10%;
 		color: $color-orange;
 		line-height: 2.3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		@media screen and (min-width: $tabwidth) {
 			width: 50%;
 			float: left;
@@ -324,7 +327,8 @@ section.our-staff {
 	.staff-member {
 		width: 100%;
 		@media screen and (min-width: $tabwidth) {
-			width: 75%;
+			width:65%;
+			padding: 0 0 0 10%;
 		}
 		.staff-photo {
 			width: 90%;
@@ -551,8 +555,45 @@ article.response {
 		font-size: 16px;
 	}
 }
-
-
+article.impact {
+	font-size: 1rem;
+	text-align: left;
+	.copy {
+		color: $color-dark-blue;
+	}
+	ul {
+		margin-top: 1.5rem;
+	}
+}
+article.blogpost {
+	width: 100%;
+	float: left;
+	margin: 0 0 40px 0;
+	-webkit-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.32);
+	-moz-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.32);
+	box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.32);
+	border-radius: 60px 0 0 0;
+	.featured-image {
+		width: 30%;
+		float: left;
+		border-radius: 60px 0 0 0;
+		overflow: hidden;
+		line-height:0;
+		img {
+			width: 100%;
+		}
+	}
+	.content {
+		width: 65%;
+		float: right;
+		padding: 0  5% 5% 5%;
+		color: $color-dark-blue;
+	}
+	h2 {
+		font-size: 30px;
+		color: $color-orange;
+	}
+}
 
 
 

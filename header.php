@@ -29,7 +29,7 @@
 <div id="page" class="site">
 
 <div class="donate">
-	<a href="<?php bloginfo('url'); ?>/donate">DONATE</a>
+	<a href="<?php the_field('donate_button_link','option'); ?>">DONATE</a>
 </div>
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
@@ -40,13 +40,13 @@
 			<?php if(is_home()) { ?>
 	            <h1 class="logo">
 		            <a href="<?php bloginfo('url'); ?>">
-		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.jpg" alt="<?php bloginfo('name'); ?>">
+		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
 		            </a>
 	            </h1>
 	        <?php } else { ?>
 	            <div class="logo">
 	            	<a href="<?php bloginfo('url'); ?>">
-		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.jpg" alt="<?php bloginfo('name'); ?>">
+		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
 		            </a>
 	            </div>
 	        <?php } ?>

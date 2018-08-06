@@ -56,7 +56,7 @@ get_header(); ?>
 					<article class="info js-blocks right">
 						<div class="padding">
 							<header>
-								<h1>Our Vission</h1>
+								<h1>Our Vision</h1>
 							</header>
 							<?php echo $our_vision_; ?>
 						</div>

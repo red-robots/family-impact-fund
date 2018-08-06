@@ -26,7 +26,12 @@ get_header(); ?>
 				<header class="page">
 					<h1><?php the_title(); ?></h1>
 				</header>
-				<?php the_content(); ?>
+				<?php the_content(); 
+
+					if( is_page('sitemap') ) {
+						wp_nav_menu( array( 'theme_location' => 'sitemap', 'menu_id' => 'primary-menu' ) );
+					}
+				?>
 			</article>
 
 			<?php endwhile; // End of the loop. ?>
