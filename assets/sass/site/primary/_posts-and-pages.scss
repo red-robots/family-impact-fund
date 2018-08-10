@@ -62,26 +62,61 @@ section.whatwedo {
 		margin: 20px auto;
 		text-align: center;
 		position: relative;
+		overflow: hidden;
 		@media screen and (min-width: $tabwidth) {
 			width: 48%;
 			margin: 0;
 		}
 		header.title {
 			text-align: center;
-			padding:0;
-			position: absolute;
+			padding:10px 0;
+			
 			z-index: 20;
 			width: 100%;
-			top: 0;
-			height: 25%;
-			left: 0;
+			
 			color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			@media screen and (min-width: $tabwidth) {
+				position: absolute;
+				top: 0;
+				height: 20%;
+				left: 0;
+				padding:0;
+			}
+			@media screen and (min-width: $midwidth) {
+				height: 25%;
+			}
+			@media screen and (min-width: $deskwidth) {
+				height: 25%;
+			}
+			.prefix {
+				width: 100%;
+				text-align: center;
+				font-size: 14px;
+				line-height: 1;
+				@media screen and (min-width: $tabwidth) {
+					font-size: 14px;
+				}
+				@media screen and (min-width: $deskwidth) {
+					font-size: 24px;
+				}
+			}
 			h2 {
 				margin: 0;
+				text-transform: uppercase;
+				line-height: 1;
 				.small {
 					font-size: 24px;
 				}
-				font-size: 40px;
+				font-size: 30px;
+				@media screen and (min-width: $tabwidth) {
+					font-size: 20px;
+				}
+				@media screen and (min-width: $deskwidth) {
+					font-size: 40px;
+				}
 			}
 		}
 		.image {
@@ -99,13 +134,30 @@ section.whatwedo {
 			width: 100%;
 			float: left;
 			color: #fff;
-			position: absolute;
+			
 			z-index: 20;
-			bottom: 0;
-			height: 75%;
-			left: 0;
+			
 			padding: 30px 20px;
-			line-height: 2;
+			line-height: 1;
+
+			@media screen and (min-width: $tabwidth) {
+				position: absolute;
+				bottom: 0;
+				height:80%;
+				left: 0;
+				padding: 10px 10px;
+			}
+			@media screen and (min-width: $midwidth) {
+				line-height: 2;
+				padding: 30px 20px;
+				height: 75%;
+			}
+			@media screen and (min-width: $midwidth) {
+				height: 75%;
+			}
+			p {
+				margin: 0;
+			}
 		}
 		
 	}
@@ -528,14 +580,14 @@ article.challenge {
 	}
 }
 article.response {
-	text-align: right;
+	// text-align: right;
 	
-	font-size: 20px;
+	// font-size: 20px;
 	@media screen and (min-width: $tabwidth) {
 
 	}
 	.copy {
-		color: $color-orange;
+		color: $color-dark-blue;
 		@media screen and (min-width: $tabwidth) {
 			padding: 0 0 0 5%;
 			margin: 0 5% 0 0;

@@ -29,7 +29,7 @@
 <div id="page" class="site">
 
 <div class="donate">
-	<a href="<?php the_field('donate_button_link','option'); ?>">DONATE</a>
+	<a href="<?php the_field('donate_button_link','option'); ?>" target="_blank">DONATE</a>
 </div>
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>

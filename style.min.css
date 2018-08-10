@@ -1826,7 +1826,7 @@ body{font-family:"Arimo",sans-serif}
 .button a:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 section.signup{background-color:#3a7cac;padding:20px;width:100%;float:left;text-align:center;color:#fff}
 header.page{width:100%;position:relative;z-index:5;text-align:center}
-header.page:after{width:100%;content:'';position:absolute;border-bottom:3px solid #fcb34c;bottom:50%;left:0}
+header.page:after{width:100%;content:'';position:absolute;border-bottom:3px solid #fcb34c;bottom:65%;left:0}
 header.page h1{width:auto;padding:0 30px;color:#f3692b;background-color:#fff;position:relative;z-index:6;margin:0 auto;display:inline-block;text-transform:uppercase;font-size:24px;margin:0 0 30px 0}
 @media screen and (min-width:600px){header.page h1{font-size:24px}
 }@media screen and (min-width:1000px){header.page h1{font-size:30px}
@@ -1843,14 +1843,26 @@ section.overview .the-overview{width:100%;padding:20px 10%;color:#f3692b;line-he
 }section.overview .umbrella{width:100%}
 @media screen and (min-width:600px){section.overview .umbrella{width:50%;float:left}
 }section.whatwedo{width:100%;float:left;background-color:#fef2e2;padding:3%}
-section.whatwedo .challenge,section.whatwedo .response{width:90%;margin:20px auto;text-align:center;position:relative}
+section.whatwedo .challenge,section.whatwedo .response{width:90%;margin:20px auto;text-align:center;position:relative;overflow:hidden}
 @media screen and (min-width:600px){section.whatwedo .challenge,section.whatwedo .response{width:48%;margin:0}
-}section.whatwedo .challenge header.title,section.whatwedo .response header.title{text-align:center;padding:0;position:absolute;z-index:20;width:100%;top:0;height:25%;left:0;color:#fff}
-section.whatwedo .challenge header.title h2,section.whatwedo .response header.title h2{margin:0;font-size:40px}
+}section.whatwedo .challenge header.title,section.whatwedo .response header.title{text-align:center;padding:10px 0;z-index:20;width:100%;color:#fff;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+@media screen and (min-width:600px){section.whatwedo .challenge header.title,section.whatwedo .response header.title{position:absolute;top:0;height:20%;left:0;padding:0}
+}@media screen and (min-width:1000px){section.whatwedo .challenge header.title,section.whatwedo .response header.title{height:25%}
+}@media screen and (min-width:1200px){section.whatwedo .challenge header.title,section.whatwedo .response header.title{height:25%}
+}section.whatwedo .challenge header.title .prefix,section.whatwedo .response header.title .prefix{width:100%;text-align:center;font-size:14px;line-height:1}
+@media screen and (min-width:600px){section.whatwedo .challenge header.title .prefix,section.whatwedo .response header.title .prefix{font-size:14px}
+}@media screen and (min-width:1200px){section.whatwedo .challenge header.title .prefix,section.whatwedo .response header.title .prefix{font-size:24px}
+}section.whatwedo .challenge header.title h2,section.whatwedo .response header.title h2{margin:0;text-transform:uppercase;line-height:1;font-size:30px}
 section.whatwedo .challenge header.title h2 .small,section.whatwedo .response header.title h2 .small{font-size:24px}
-section.whatwedo .challenge .image,section.whatwedo .response .image{width:100%;position:relative;bottom:0;left:0;z-index:1;line-height:0}
+@media screen and (min-width:600px){section.whatwedo .challenge header.title h2,section.whatwedo .response header.title h2{font-size:20px}
+}@media screen and (min-width:1200px){section.whatwedo .challenge header.title h2,section.whatwedo .response header.title h2{font-size:40px}
+}section.whatwedo .challenge .image,section.whatwedo .response .image{width:100%;position:relative;bottom:0;left:0;z-index:1;line-height:0}
 section.whatwedo .challenge .image img,section.whatwedo .response .image img{width:100%}
-section.whatwedo .challenge .copy,section.whatwedo .response .copy{width:100%;float:left;color:#fff;position:absolute;z-index:20;bottom:0;height:75%;left:0;padding:30px 20px;line-height:2}
+section.whatwedo .challenge .copy,section.whatwedo .response .copy{width:100%;float:left;color:#fff;z-index:20;padding:30px 20px;line-height:1}
+@media screen and (min-width:600px){section.whatwedo .challenge .copy,section.whatwedo .response .copy{position:absolute;bottom:0;height:80%;left:0;padding:10px 10px}
+}@media screen and (min-width:1000px){section.whatwedo .challenge .copy,section.whatwedo .response .copy{line-height:2;padding:30px 20px;height:75%}
+}@media screen and (min-width:1000px){section.whatwedo .challenge .copy,section.whatwedo .response .copy{height:75%}
+}section.whatwedo .challenge .copy p,section.whatwedo .response .copy p{margin:0}
 @media screen and (min-width:600px){section.whatwedo .challenge{float:left}
 }section.whatwedo .challenge header.title{background-color:#3a7cac}
 section.whatwedo .challenge .copy{background-color:rgba(58,124,172,0.7)}
@@ -1929,8 +1941,7 @@ article.challenge .strategies .strat,article.response .strategies .strat{color:#
 article.challenge .copy:after{width:90%;content:'';position:absolute;border-bottom:2px solid #fcb34c;left:0;bottom:0}
 }article.challenge .copy blockquote{width:100%;padding:20px;background-color:#3a7cac;color:#fff;margin:0}
 @media screen and (min-width:600px){article.challenge .image{border-radius:60px 0 0 0;float:left}
-}article.response{text-align:right;font-size:20px}
-article.response .copy{color:#f3692b}
+}article.response .copy{color:#3a7cac}
 @media screen and (min-width:600px){article.response .copy{padding:0 0 0 5%;margin:0 5% 0 0;float:right}
 }@media screen and (min-width:600px){article.response .image{border-radius:0 60px 0 0;float:left}
 }article.response blockquote{padding:0;margin:0;color:#3a7cac;font-size:16px}

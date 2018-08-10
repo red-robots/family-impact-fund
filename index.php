@@ -26,10 +26,12 @@ get_header(); ?>
 
 			$overview = get_field('overview');
 			$challenge_text = get_field('challenge_text');
+			$title_challenge_prefix = get_field('title_challenge_prefix');
 			$title_challenge = get_field('title_challenge');
 			$challenge_link = get_field('challenge_link');
 			$challenge_background_image = get_field('challenge_background_image');
 			$response_text = get_field('response_text');
+			$response_title_prefix = get_field('response_title_prefix');
 			$response_title = get_field('response_title');
 			$response_link = get_field('response_link');
 			$response_background_image = get_field('response_background_image');
@@ -67,7 +69,10 @@ get_header(); ?>
 						<img src="<?php echo $challenge_background_image['url']; ?>">
 					</div>
 					<header class="title">
-						<h2><?php echo $title_challenge; ?></h2>
+						<div class="words">
+							<div class="prefix"><?php echo $title_challenge_prefix; ?></div>
+							<h2><?php echo $title_challenge; ?></h2>
+						</div>
 					</header>
 					<div class="copy">
 						<?php echo $challenge_text; ?>
@@ -82,7 +87,10 @@ get_header(); ?>
 						<img src="<?php echo $response_background_image['url']; ?>">
 					</div>
 					<header class="title">
-						<h2><?php echo $response_title; ?></h2>
+						<div class="words">
+							<div class="prefix"><?php echo $response_title_prefix; ?></div>
+							<h2><?php echo $response_title; ?></h2>
+						</div>
 					</header>
 					<div class="copy">
 						<?php echo $response_text; ?>
