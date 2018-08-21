@@ -64,6 +64,7 @@ get_header(); ?>
 				</section>
 				<section class="about-mid">
 					<div class="the-overview">
+					<h1>Our Commitment</h1>
 						<?php echo $case_for_support; ?>
 					</div>
 					<div class="umbrella">
@@ -76,11 +77,14 @@ get_header(); ?>
 				<div class="image">
 					<img src="<?php echo $our_program_image['url'] ?>" alt="<?php echo $our_program_image['alt'] ?>">
 				</div>
-				<article class="program-contents">
-					<h1>Our Program</h1>
-					<h2>The Solution</h2>
-					<?php echo $our_program_overview; ?>
-				</article>
+				<div class="flexbox">
+					<article class="program-contents">
+						<h1>Our Program</h1>
+						<!-- <h2>The Solution</h2> -->
+						<?php echo $our_program_overview; ?>
+					</article>
+				</div>
+				
 			</section>
 			<?php 
 				$staff_name = get_field('staff_name');

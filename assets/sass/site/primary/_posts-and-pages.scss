@@ -34,13 +34,21 @@ section.overview {
 		width: 100%;
 		padding: 20px 10%;
 		color: $color-orange;
-		line-height: 2.3;
+		line-height: 1.6;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		font-size: 6vw;
 		@media screen and (min-width: $tabwidth) {
 			width: 50%;
 			float: left;
+			font-size: 1.6vw;
+		}
+		p {
+			margin: 0;
+		}
+		h2 {
+			margin: 0 0 10px 0;
 		}
 	}
 	.umbrella {
@@ -292,15 +300,33 @@ section.mission
 		width: 100%;
 		padding: 10px 3%;
 		color: $color-dark-blue;
-		line-height: 1.8;
-		@media screen and (min-width: $tabwidth) {
+		line-height: 1.6;
+		@media screen and (min-width: $midwidth) {
 			width: 50%;
 			float: left;
+			font-size: 1.3vw;
+		}
+		h1 {
+			color: $color-orange;
+			text-transform: uppercase;
+			font-size: 24px;
+			margin: 20px 0px 0;
+			line-height: 1;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 24px;
+				margin: 0px 0px 0;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 30px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 40px;
+			}
 		}
 	}
 	.umbrella {
 		width: 100%;
-		@media screen and (min-width: $tabwidth) {
+		@media screen and (min-width: $midwidth) {
 			width: 50%;
 			float: left;
 		}
@@ -321,12 +347,41 @@ section.our-program {
 			width: 100%;
 		}
 	}
-	article.program-contents {
-		width: 90%;
-		background-color: #fff;
-		color: $color-dark-blue;
+	.flexbox {
+		width: 100%;
 		position: relative;
 		z-index: 40;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media screen and (min-width: $midwidth) {
+			width: 100%;
+			position: absolute;
+			right: 0;
+			top: 0%;
+			height: 100%;
+		}
+		// @media screen and (min-width: $midwidth) {
+		// 	width: 75%;
+		// }
+		@media screen and (min-width: $deskwidth) {
+			width: 50%;
+		}
+	}
+	article.program-contents {
+		width: 90%;
+		background-color: rgba(#fff, .7);
+		color: $color-dark-blue;
+		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			width: 100%;
+			text-align: right;
+			padding: 20px 5% 0 2%;
+			background-color: rgba(#fff, .7);
+		}
+		@media screen and (min-width: $deskwidth) {
+			background-color: rgba(#fff, 1);
+		}
 		h1, h2 {
 			color: $color-orange;
 			margin: 0;
@@ -339,6 +394,7 @@ section.our-program {
 			line-height: 1;
 			@media screen and (min-width: $tabwidth) {
 				font-size: 24px;
+				margin: 0px 0px 0;
 			}
 			@media screen and (min-width: $midwidth) {
 				font-size: 30px;
@@ -355,14 +411,7 @@ section.our-program {
 				font-size: 22px;
 			}
 		}
-		@media screen and (min-width: $tabwidth) {
-			width: 50%;
-			position: absolute;
-			right: 0;
-			top: 20%;
-			text-align: right;
-			padding: 20px 5% 0 2%;
-		}
+		
 
 
 	}
