@@ -56,7 +56,7 @@ get_header(); ?>
 
 			<section class="overview">
 				<div class="the-overview js-blocks">
-				<h2>Our Mission</h2>
+				<h1>Our Mission</h1>
 					<?php echo $overview; ?>
 				</div>
 				<div class="umbrella js-blocks">

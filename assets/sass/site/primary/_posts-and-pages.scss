@@ -50,6 +50,21 @@ section.overview {
 		h2 {
 			margin: 0 0 10px 0;
 		}
+		h1 {
+			color: $color-orange;
+			text-transform: uppercase;
+			font-size: 24px;
+			margin: 20px 0 5px 0;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 24px;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 30px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 40px;
+			}
+		}
 	}
 	.umbrella {
 		width: 100%;

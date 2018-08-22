@@ -97,7 +97,7 @@
 		padding: 0 ;
 		// text-transform: uppercase;
 		font-family: $font-copy;
-		font-weight: 300;
+		font-weight: 600;
 		width: 100%;
 		font-size: 14px;
 		@media screen and (min-width: $tabwidth) {
@@ -110,7 +110,7 @@
 			}
 		}
 		@media screen and (min-width: $deskwidth) {
-			// padding: 0 30px;
+			font-size: 16px;
 		}
 
 		&:hover > a,
@@ -128,7 +128,7 @@
 			padding: 0% 20px;
 		}
 		@media screen and (min-width: $deskwidth) {
-			// padding: 0% 30px;
+			padding: 0% 15px;
 		}
 		&:hover {
 			background-color: rgba($color-yellow, 1);

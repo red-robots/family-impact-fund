@@ -1681,11 +1681,13 @@ a:hover,a:active{outline:0}
 .main-navigation ul ul li:hover>ul,.main-navigation ul ul li.focus>ul{left:100%}
 .main-navigation ul ul a{width:200px}
 .main-navigation ul li:hover>ul,.main-navigation ul li.focus>ul{left:auto}
-.main-navigation li{position:relative;text-align:center;display:inline-block;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:0;font-family:"Arimo",sans-serif;font-weight:300;width:100%;font-size:14px}
+.main-navigation li{position:relative;text-align:center;display:inline-block;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:0;font-family:"Arimo",sans-serif;font-weight:600;width:100%;font-size:14px}
 @media screen and (min-width:600px){.main-navigation li{line-height:2;width:auto}
 .main-navigation li:first-of-type{border:0}
+}@media screen and (min-width:1200px){.main-navigation li{font-size:16px}
 }.main-navigation a{display:block;text-decoration:none;padding:10px 0;color:#3a7cac;-webkit-transition:all ease .4s;transition:all ease .4s}
 @media screen and (min-width:600px){.main-navigation a{padding:0 20px}
+}@media screen and (min-width:1200px){.main-navigation a{padding:0 15px}
 }.main-navigation a:hover{background-color:#fcb34c;color:#000}
 .menu-toggle,.main-navigation.toggled ul{display:block}
 .menu-toggle ul.sub-menu,.main-navigation.toggled ul ul.sub-menu{background-color:rgba(255,255,255,0.1)}
@@ -1842,7 +1844,11 @@ section.overview .the-overview{width:100%;padding:20px 10%;color:#f3692b;line-he
 @media screen and (min-width:600px){section.overview .the-overview{width:50%;float:left;font-size:1.6vw}
 }section.overview .the-overview p{margin:0}
 section.overview .the-overview h2{margin:0 0 10px 0}
-section.overview .umbrella{width:100%}
+section.overview .the-overview h1{color:#f3692b;text-transform:uppercase;font-size:24px;margin:20px 0 5px 0}
+@media screen and (min-width:600px){section.overview .the-overview h1{font-size:24px}
+}@media screen and (min-width:1000px){section.overview .the-overview h1{font-size:30px}
+}@media screen and (min-width:1200px){section.overview .the-overview h1{font-size:40px}
+}section.overview .umbrella{width:100%}
 @media screen and (min-width:600px){section.overview .umbrella{width:50%;float:left}
 }section.whatwedo{width:100%;float:left;background-color:#fef2e2;padding:3%}
 section.whatwedo .challenge,section.whatwedo .response{width:90%;margin:20px auto;text-align:center;position:relative;overflow:hidden}
