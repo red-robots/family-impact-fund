@@ -1840,7 +1840,7 @@ header.page h1{width:auto;padding:0 30px;color:#f3692b;background-color:#fff;pos
 .page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
 .page-links{clear:both;margin:0 0 1.5em}
 section.overview{width:100%;float:left;border-top:8px solid #62b4e3}
-section.overview .the-overview{width:100%;padding:20px 10%;color:#f3692b;line-height:1.6;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:6vw}
+section.overview .the-overview{width:100%;padding:20px 10%;color:#3a7cac;line-height:1.6;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:6vw}
 @media screen and (min-width:600px){section.overview .the-overview{width:50%;float:left;font-size:1.6vw}
 }section.overview .the-overview p{margin:0}
 section.overview .the-overview h2{margin:0 0 10px 0}
