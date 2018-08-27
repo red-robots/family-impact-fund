@@ -1684,7 +1684,7 @@ a:hover,a:active{outline:0}
 .main-navigation li{position:relative;text-align:center;display:inline-block;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:0;font-family:"Arimo",sans-serif;font-weight:600;width:100%;font-size:14px}
 @media screen and (min-width:600px){.main-navigation li{line-height:2;width:auto}
 .main-navigation li:first-of-type{border:0}
-}@media screen and (min-width:1200px){.main-navigation li{font-size:16px}
+}@media screen and (min-width:1200px){.main-navigation li{font-size:18px}
 }.main-navigation a{display:block;text-decoration:none;padding:10px 0;color:#3a7cac;-webkit-transition:all ease .4s;transition:all ease .4s}
 @media screen and (min-width:600px){.main-navigation a{padding:0 20px}
 }@media screen and (min-width:1200px){.main-navigation a{padding:0 15px}
@@ -1817,7 +1817,7 @@ body{font-family:"Arimo",sans-serif}
 }@media screen and (min-width:1200px){}
 .logo,h1.logo{width:280px;margin:10px auto}
 @media screen and (min-width:600px){.logo,h1.logo{width:250px;float:left;margin:0}
-}@media screen and (min-width:1000px){.logo,h1.logo{width:40%}
+}@media screen and (min-width:1000px){.logo,h1.logo{width:35%}
 }@media screen and (min-width:1200px){}
 .logo a,h1.logo a{width:100%;display:block}
 .home-slider{width:100%}

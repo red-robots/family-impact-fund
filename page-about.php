@@ -62,7 +62,7 @@ get_header(); ?>
 						</div>
 					</article>
 				</section>
-				<section class="about-mid">
+				<!-- <section class="about-mid">
 					<div class="the-overview">
 					<h1>Our Commitment</h1>
 						<?php echo $case_for_support; ?>
@@ -70,7 +70,7 @@ get_header(); ?>
 					<div class="umbrella">
 						<img src="<?php bloginfo('template_url'); ?>/images/umbrella.png">
 					</div>
-				</section>
+				</section> -->
 			</div>
 
 			<section class="our-program">
