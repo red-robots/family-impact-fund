@@ -153,6 +153,18 @@ section.signup {
 	float: left;
 	text-align: center;
 	color: #fff;
+	h2 {
+		width: auto;
+		display: inline-block;
+		a {
+			display: block;
+			padding: 10px 20px;
+			border: 1px solid #fff;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	
 }
 header.page {
 	width: 100%;

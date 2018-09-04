@@ -20,6 +20,9 @@ $spambot = antispambot($email);
 		<div class="wrapper">
 			<div class="site-info">
 				<?php echo '<a href="mailto:'.$spambot.'">'.$spambot.'</a> | '.$address.' | '.$phone; ?>
+
+				
+
 			</div><!-- .site-info -->
 		</div><!-- wrapper -->
 	</footer><!-- #colophon -->
