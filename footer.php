@@ -12,9 +12,16 @@ $email = get_field('email_address', 'option');
 $address = get_field('address', 'option');
 $phone = get_field('phone', 'option');
 $spambot = antispambot($email);
+$facebook = get_field('facebook_link', 'option');
 ?>
 
 	</div><!-- #content -->
+
+	<section class="social">
+		<a href="<?php echo $facebook; ?>">
+			<i class="fab fa-facebook"></i>
+		</a>
+	</section>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">

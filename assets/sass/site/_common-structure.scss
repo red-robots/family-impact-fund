@@ -202,3 +202,18 @@ header.page {
 		}
 	}
 }
+section.social {
+	width: 100%;
+	padding: 20px;
+	background-color: #fff;
+	color: #fff;
+	float:left;
+	text-align: center;
+	svg {
+		display: inline-block;
+		font-size: 60px;
+	}
+	a {
+		color: $color-dark-blue;
+	}
+}
