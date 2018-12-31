@@ -59,7 +59,7 @@ get_header(); ?>
 			                                    <?php } ?>
 			                                    <h2 class="item-title"><?php echo $page_title;?></h2>
 			                                    <div class="excerpt"><?php echo shortenText($content,200); ?></div>
-			                                    <div class="buttondiv"><a href="<?php echo get_permalink(); ?>">Read More</a></div>
+			                                    <div class="buttondiv"><a href="<?php echo get_permalink($id); ?>">Read More</a></div>
 			                                </div>
 			                            </div>
 			                        </div>
