@@ -66,43 +66,61 @@ jQuery(document).ready(function ($) {
  		 });
 	});
 
-	/*
+	$("#menu-item-92 .sub-menu a").each(function(){
+		var url = $(this).attr('href');
+		var current_path = url.split('/');
+		var parts = [];
+		$(current_path).each(function(i,v){
+			if(v) {
+				parts.push(v);
+			}
+		});
+		var last = $(parts).last();
+		var slug = last[0];
+		var new_Url = baseURL + '/news-events/#' + slug;
+		$(this).attr('href',new_Url);
+	});
+
+		/*
 	*
 	*	Smooth Scroll to Anchor
 	*
 	------------------------------------*/
-	$('a[href*=#]:not([href=#])').click(function() {        
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-            && location.hostname == this.hostname) {
-
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-              
-            if(times_clicked==1) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top - 195 //offsets for fixed header
-                }, 1000);
-            } else {
-                $('html,body').animate({
-                  scrollTop: target.offset().top - 125 //offsets for fixed header
-                }, 1000);
-            }
-            
+	$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
             return false;
-            
-          }
-        }
-    });
-
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	// $(function(){	
-	// 	$("html").niceScroll();
-	// });
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
 	
 	
 	/*

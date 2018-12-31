@@ -62,3 +62,34 @@ function get_social_links() {
 			);
 	return $social_link;
 }
+
+
+function get_posts_by_category($orderBy='menu_order',$order='ASC') {
+    global $wpdb;
+    $taxonomy = 'category';
+    $tax_terms = get_terms($taxonomy, array('hide_empty' => false));
+    $prefix = $wpdb->prefix;
+    $records = array();
+    if($tax_terms) {
+        foreach($tax_terms as $t) {
+            $term_id = $t->term_id;
+            $term_name = $t->name;
+            $term_slug = $t->slug;
+            $query = "SELECT rel.term_taxonomy_id as term_id,p.ID as post_id,p.post_title FROM ".$prefix."term_relationships as rel,".$prefix."posts as p
+                      WHERE rel.object_id=p.ID AND rel.term_taxonomy_id=".$term_id." ORDER BY p." . $orderBy . " " . $order;
+            $results = $wpdb->get_results( $query, OBJECT );
+            $items = ($results) ? $results : '';
+            if($items) {
+	            $args = array(
+	                    'term_id'=>$term_id,
+	                    'term_name'=>$term_name,
+	                    'term_slug'=>$term_slug,
+	                    'posts'=>$items
+	                );
+	            $records[] = $args;
+        	}
+        }
+    }
+     
+    return $records;
+}

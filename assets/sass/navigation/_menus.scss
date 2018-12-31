@@ -33,6 +33,7 @@
 		max-height: 0;
 		@media screen and (min-width: $tabwidth) {
 			max-height: 1000px;
+			overflow: visible;
 		}
 	}
 
@@ -46,13 +47,18 @@
 		}
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
+			position: relative;
 			z-index: 99999;
-
+			display: block;
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				display: none;
+				position: absolute;
+				left: -999em;
+				width: 180px;
+				border-top: 2px solid #FFF;
+			}
 			ul {
 				left: -999em;
 				top: 0;
@@ -71,24 +77,6 @@
 				}
 			}
 
-
-			a {
-				width: 200px;
-				@media screen and (min-width: $tabwidth) {
-		
-				}
-				@media screen and (min-width: $deskwidth) {
-					
-				}
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li:hover > ul,
@@ -128,6 +116,7 @@
 		&.focus > a {
 		}
 	}
+
 	a {
 		display: block;
 		// align-items: center;
@@ -149,11 +138,62 @@
 			color: $color-black;
 		}
 	}
+	.sub-menu {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		@media screen and (min-width: $tabwidth) {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			background-color: $color-yellow;
+		}
+	}
+	.sub-menu li {
+		line-height: 1.3;
+		display: block;
+		&.current-menu-item > a {
+			color: $color-yellow;
+			@media screen and (min-width: $tabwidth) {
+				color: #FFF;
+			}
+		}
+	}
+	.sub-menu a {
+		&:hover {
+			background-color: transparent;
+			color: $color-yellow;
+		}
+		@media screen and (min-width: $tabwidth) {
+			background-color: rgba($color-yellow, 1);
+			font-size: 13px;
+			padding: 6px 15px;
+			color: #000;
+			text-align: left;
+			&:hover {
+				background-color: $color-yellow;
+				color: #FFF;
+			}
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 15px;
+		}
+	} 
+
+	.menu > li:hover > ul {
+		display: block;
+	}
+	.menu > li:hover > a {
+		background-color: rgba($color-yellow, 1);
+		color: $color-black;
+	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		@media screen and (min-width: $tabwidth) {
+			background-color: $color-yellow;
+			color: #FFF;
+		}
 	}
 }
 

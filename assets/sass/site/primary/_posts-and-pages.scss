@@ -712,7 +712,7 @@ article.blogpost {
 }
 #masthead {
 	position: relative;
-	z-index: 2;
+	z-index: 200;
 }
 .top_options {
 	width: 100%;
@@ -1002,4 +1002,20 @@ article.blogpost {
 		}
 
 	}
+}
+
+.category-items {
+	border-top: 2px solid $color-orange;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	&.first {
+		border-top: none;
+		padding-top: 0;
+	}
+}
+.category-name {
+	margin: 0 0;
+	font-size: 30px;
+	color: $color-orange;
+	text-transform: uppercase;
 }

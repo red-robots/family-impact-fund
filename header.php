@@ -20,7 +20,9 @@
 
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Arimo|Cormorant+Garamond:300,400,600" rel="stylesheet">
-
+<script type="text/javascript">
+	var baseURL = '<?php echo get_site_url(); ?>';
+</script>
 
 <?php wp_head(); ?>
 </head>
