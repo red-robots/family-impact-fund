@@ -46,7 +46,7 @@
 				<div class="socialmedia topdiv">
 					<div class="inside">
 					<?php foreach($social_link as $soc) { ?>
-						<?php if($soc['link']) { ?><a href="<?php echo $soc['link']; ?>"><i class="<?php echo $soc['icon']; ?>"></i></a><?php } ?>
+						<?php if($soc['link']) { ?><a target="_blank" href="<?php echo $soc['link']; ?>"><i class="<?php echo $soc['icon']; ?>"></i></a><?php } ?>
 					<?php } ?>
 					</div>
 				</div>
