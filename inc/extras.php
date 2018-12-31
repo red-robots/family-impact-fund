@@ -27,3 +27,38 @@ function acstarter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'acstarter_body_classes' );
+
+
+function shortenText($string, $limit, $break=".", $pad="...") {
+  // return with no change if string is shorter than $limit
+  if(strlen($string) <= $limit) return $string;
+
+  // is $break present between $limit and the end of the string?
+  if(false !== ($breakpoint = strpos($string, $break, $limit))) {
+    if($breakpoint < strlen($string) - 1) {
+      $string = substr($string, 0, $breakpoint) . $pad;
+    }
+  }
+
+  return $string;
+}
+
+function get_social_links() {
+	$social_link[] = array(
+				'link'=> get_field('facebook_link','option'),
+				'icon'=> 'fab fa-facebook-f'
+			);
+	$social_link[] = array(
+				'link'=> get_field('twitter_link','option'),
+				'icon'=> 'fab fa-twitter'
+			);
+	$social_link[] = array(
+				'link'=> get_field('instagram_link','option'),
+				'icon'=> 'fab fa-instagram'
+			);
+	$social_link[] = array(
+				'link'=> get_field('linkedin_link','option'),
+				'icon'=> 'fab fa-linkedin-in'
+			);
+	return $social_link;
+}

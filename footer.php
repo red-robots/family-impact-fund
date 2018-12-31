@@ -12,25 +12,21 @@ $email = get_field('email_address', 'option');
 $address = get_field('address', 'option');
 $phone = get_field('phone', 'option');
 $spambot = antispambot($email);
-$facebook = get_field('facebook_link', 'option');
+$social_link = get_social_links();
 ?>
 
 	</div><!-- #content -->
 
-	<section class="social">
-		<a href="<?php echo $facebook; ?>">
-			<i class="fab fa-facebook"></i>
-		</a>
-	</section>
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
 			<div class="site-info">
-				<?php echo '<a href="mailto:'.$spambot.'">'.$spambot.'</a> | '.$address.' | '.$phone; ?>
-
-				
-
+				<?php echo '<a href="mailto:'.$spambot.'">'.$spambot.'</a> | '.$address; ?>
 			</div><!-- .site-info -->
+			<div class="social-media">
+				<?php foreach($social_link as $soc) { ?>
+					<?php if($soc['link']) { ?><a href="<?php echo $soc['link']; ?>"><i class="<?php echo $soc['icon']; ?>"></i></a><?php } ?>
+				<?php } ?>
+			</div>
 		</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

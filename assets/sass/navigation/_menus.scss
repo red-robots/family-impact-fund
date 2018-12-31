@@ -4,14 +4,22 @@
 	text-align: center;
 	width: 100%;
 	background-color: #fff;
+	top: 0;
+	right: 0;
+	@media screen and (min-width: $tabwidth) {
+		margin-top: 60px;
+		position: relative;
+		right: -8px;
+		text-align: right;
+	}
 	@media screen and (min-width: $midwidth) {
+		margin-top: 55px;
 		clear: none;
 		width: auto;
-		
-
+		right: -13px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		text-align: left;
+		text-align: right;
 	}
 	.menu {
 		@include transition(all ease 1s);
@@ -128,10 +136,13 @@
 		color: $color-dark-blue;
 		@include transition(all ease .4s);
 		@media screen and (min-width: $tabwidth) {
-			padding: 0% 20px;
+			padding: 0 10px;
+		}
+		@media screen and (min-width: $midwidth) {
+			padding: 0 20px;
 		}
 		@media screen and (min-width: $deskwidth) {
-			padding: 0% 15px;
+			padding: 0 15px;
 		}
 		&:hover {
 			background-color: rgba($color-yellow, 1);

@@ -16,8 +16,8 @@ get_header(); ?>
 
 
 
-	<div id="primary" class="content-area-full">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="content-area-full clear">
+		<main id="main" class="site-main clear" role="main">
 
 		<?php
 			/* Start the Loop */
@@ -38,7 +38,7 @@ get_header(); ?>
 
 			?> 
 			
-			<div class="home-slider">
+			<div class="home-slider clear">
 				<?php if(have_rows('banners')) : ?>
 					<div class="flexslider">
 				        <ul class="slides">
@@ -51,10 +51,9 @@ get_header(); ?>
 				      	 </ul><!-- slides -->
 				</div><!-- .flexslider -->
 				<?php endif; // end loop ?>
-			    
 			</div><!-- home slider -->
 
-			<section class="overview">
+			<section class="overview clear">
 				<div class="the-overview js-blocks">
 				<h1>Our Mission</h1>
 					<?php echo $overview; ?>
@@ -64,7 +63,7 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section class="whatwedo">
+			<section class="whatwedo clear">
 				<div class="challenge">
 					<div class="image">
 						<img src="<?php echo $challenge_background_image['url']; ?>">
@@ -104,6 +103,8 @@ get_header(); ?>
 			</section>
 
 			<?php endif; ?>
+
+			<?php get_template_part('inc/home-news') ?>
 
 			<?php get_template_part('inc/signup') ?>
 

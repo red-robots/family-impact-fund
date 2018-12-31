@@ -27,14 +27,39 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+<?php
+	$member_link = get_field('member_login_link','option');
+	$subscribe_link = get_field('subscribe_link','option');
+	$contact_link = get_field('contact_link','option');
+	$apply_link = get_field('apply_button_link','option');
+	$donate_link = get_field('donate_button_link','option');
+	$social_link = get_social_links();
+?>
 
-<div class="donate">
-	<a href="<?php the_field('donate_button_link','option'); ?>" target="_blank">DONATE</a>
-</div>
+	<div class="top_options">
+		<div class="wrapper">
+			<div class="socialmedia topdiv">
+				<div class="inside">
+				<?php foreach($social_link as $soc) { ?>
+					<?php if($soc['link']) { ?><a href="<?php echo $soc['link']; ?>"><i class="<?php echo $soc['icon']; ?>"></i></a><?php } ?>
+				<?php } ?>
+				</div>
+			</div>
+			<div class="linksdiv topdiv">
+				<?php if($member_link) { ?><div><a target="_blank" href="<?php echo $member_link; ?>">Board Member Log-In</a></div><?php } ?>
+				<?php if($subscribe_link) { ?><div><a target="_blank" href="<?php echo $subscribe_link; ?>">Subscribe to Newsletter</a></div><?php } ?>
+				<?php if($contact_link) { ?><div><a href="<?php echo $contact_link; ?>">Contact Us</a></div><?php } ?>
+			</div>
+			<div class="buttonsdiv topdiv">
+				<?php if($apply_link) { ?><a class="apply_link" href="<?php echo $apply_link; ?>" target="_blank">APPLY</a><?php } ?>
+				<?php if($donate_link) { ?><a class="donate_link" href="<?php echo $donate_link; ?>" target="_blank">DONATE</a><?php } ?>
+			</div>
+		</div>
+	</div>
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header clear" role="banner">
 		<div class="wrapper headerflex">
 			
 			<?php if(is_home()) { ?>
@@ -58,4 +83,4 @@
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content ">
+	<div id="content" class="site-content clear">

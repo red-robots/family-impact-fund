@@ -1,6 +1,23 @@
 body {
 	font-family: $font-copy;
 }
+.clear:before, .clear:after { content: " "; display: table; }
+.clear { *zoom: 1; }
+.clear {clear: both;}
+div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
+	overflow-wrap: normal;
+	word-wrap: normal;
+
+	-ms-word-break: normal;
+	word-break: normal;
+	word-break: normal;
+
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none;
+	page-break-inside: avoid;
+}
 .donate {
 	width: auto;
 	position: relative;
@@ -24,7 +41,6 @@ body {
 		text-decoration: none;
 	}
 }
-.clear {clear: both;}
 .wrapper {
 	width: 100%;
 	margin: 0px auto;
@@ -45,15 +61,23 @@ body {
 	}
 }
 #masthead {
-	padding: 40px 0;
+	padding: 155px 0 10px;
+	@media screen and (min-width: $tabwidth) {
+		padding: 43px 0 10px;
+	}
+	.wrapper {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }
 .headerflex {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
-	@media screen and (min-width: $midwidth) {
+	align-items: left;
+	@media screen and (min-width: $tabwidth) {
 		flex-direction: row;
+		align-items: center;
 	}
 }
 .content-area {
@@ -87,18 +111,17 @@ body {
 /* Logo */
 .logo , h1.logo {
 	width: 280px;
-	margin: 10px auto;
-
+	margin: 10px auto 0;
+	position: relative;
 	@media screen and (min-width: $tabwidth) {
-		width: 250px;
+		width: 280px;
 		float: left;
 		margin: 0;
+		top: 15px;
 	}
 	@media screen and (min-width: $midwidth) {
-		width: 35%;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
+		width: 430px;
+		top: -12px;
 	}
 }
 .logo a, h1.logo a {
@@ -139,7 +162,7 @@ body {
 		display: block;
 		color: #fff;
 		background-color: $color-yellow;
-		@include transition(all ease .1s);
+		@include transition (all ease-out .2s);
 		transform: scale(1);
 		&:hover {
 			transform: scale(1.1);
@@ -147,21 +170,29 @@ body {
 	}
 }
 section.signup {
-	background-color: $color-dark-blue;
-	padding: 20px;
 	width: 100%;
-	float: left;
 	text-align: center;
 	color: #fff;
+	padding-top: 40px;
+	padding-bottom: 50px;
 	h2 {
 		width: auto;
 		display: inline-block;
+		margin: 0 0;
+		font-size: 20px;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 25px;
+		}
 		a {
 			display: block;
-			padding: 10px 20px;
-			border: 1px solid #fff;
+			padding: 13px 20px;
 			color: #fff;
 			text-decoration: none;
+			background: $color-orange;
+			border-radius: 8px;
+			@media screen and (min-width: $tabwidth) {
+				padding: 13px 30px;
+			}
 		}
 	}
 	
