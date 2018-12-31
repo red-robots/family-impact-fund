@@ -718,11 +718,19 @@ article.blogpost {
 	width: 100%;
 	position: absolute;
 	top: 0;
-	left: 0;
-	z-index: 5;
+	right: 0;
 	@media screen and (min-width: $tabwidth) {
-		top: 15px;
+		width: 100%;
+		top: -31px;
 		text-align: right;
+		right: 22px;
+	}
+	@media screen and (min-width: $midwidth) {
+		width: 55%;
+		right: 26px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		right: 0;
 	}
 	.wrapper {
 		padding-top: 0;

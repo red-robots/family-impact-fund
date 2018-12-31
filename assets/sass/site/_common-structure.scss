@@ -61,13 +61,14 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
 	}
 }
 #masthead {
-	padding: 155px 0 10px;
+	padding: 0 0 10px;
 	@media screen and (min-width: $tabwidth) {
 		padding: 43px 0 10px;
 	}
 	.wrapper {
 		padding-top: 0;
 		padding-bottom: 0;
+		position: relative;
 	}
 }
 .headerflex {
@@ -111,7 +112,7 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
 /* Logo */
 .logo , h1.logo {
 	width: 280px;
-	margin: 10px auto 0;
+	margin: 166px auto 0;
 	position: relative;
 	@media screen and (min-width: $tabwidth) {
 		width: 280px;
