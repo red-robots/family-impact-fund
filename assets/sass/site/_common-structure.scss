@@ -18,6 +18,12 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
 	hyphens: none;
 	page-break-inside: avoid;
 }
+.content-area-full {
+	min-height: 30em;
+}
+.site-content {
+	margin-top: 10px;
+}
 .donate {
 	width: auto;
 	position: relative;

@@ -10,6 +10,7 @@
 get_header(); ?>
 <div class="wrapper">
 	<div id="primary" class="content-area">
+
 		<main id="main" class="site-main" role="main">
 
 		<?php

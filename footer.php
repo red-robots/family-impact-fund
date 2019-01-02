@@ -24,7 +24,7 @@ $social_link = get_social_links();
 			</div><!-- .site-info -->
 			<div class="social-media">
 				<?php foreach($social_link as $soc) { ?>
-					<?php if($soc['link']) { ?><a href="<?php echo $soc['link']; ?>"><i class="<?php echo $soc['icon']; ?>"></i></a><?php } ?>
+					<?php if($soc['link']) { ?><a href="<?php echo $soc['link']; ?>" target="_blank"><i class="<?php echo $soc['icon']; ?>"></i></a><?php } ?>
 				<?php } ?>
 			</div>
 		</div><!-- wrapper -->

@@ -9,14 +9,12 @@
 	@media screen and (min-width: $tabwidth) {
 		margin-top: 60px;
 		position: relative;
-		right: -8px;
 		text-align: right;
 	}
 	@media screen and (min-width: $midwidth) {
 		margin-top: 55px;
 		clear: none;
 		width: auto;
-		right: -13px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		text-align: right;

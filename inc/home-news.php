@@ -16,7 +16,14 @@
                     $categories = get_the_category($post_id); 
                     $featured_image = get_the_post_thumbnail(); 
                     $content = get_the_content(); 
-                    $content = strip_tags($content); ?>
+                    $content = strip_tags($content); 
+                    $summary = get_the_excerpt();
+                    $excerpt = '';
+                    if($summary) {
+                        $excerpt = $summary;
+                    } else {
+                        $excerpt = shortenText($content,200);
+                    } ?>
                     <div class="post-item <?php echo ($featured_image) ? 'has-image':'no-image'?>">
                         <div class="inside clear">
                             <div class="wrap clear">
@@ -36,7 +43,7 @@
                                         </div>
                                     <?php } ?>
                                     <h2 class="item-title"><?php the_title();?></h2>
-                                    <div class="excerpt"><?php echo shortenText($content,200); ?></div>
+                                    <div class="excerpt"><?php echo $excerpt; ?></div>
                                     <div class="buttondiv"><a href="<?php echo get_permalink(); ?>">Read More</a></div>
                                 </div>
                             </div>

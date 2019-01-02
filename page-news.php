@@ -7,7 +7,7 @@
  * @package ACStarter
  */
 get_header(); ?>
-<div id="primary" class="content-area-full">
+<div id="primary" class="content-area-full news-page">
 	<main id="main" class="site-main" role="main">
 		<?php
 		while ( have_posts() ) : the_post(); ?>
@@ -38,7 +38,15 @@ get_header(); ?>
 			                    $featured_image = get_the_post_thumbnail($id); 
 			                    $page_title = $data->post_title;
 			                    $content = $data->post_content; 
-			                    $content = strip_tags($content); ?>
+			                    $content = strip_tags($content); 
+			                    $summary = get_the_excerpt($id);
+			                    $excerpt = '';
+			                    if($summary) {
+			                        $excerpt = $summary;
+			                    } else {
+			                        $excerpt = shortenText($content,200);
+			                    }
+			                    ?>
 								<div class="post-item <?php echo ($featured_image) ? 'has-image':'no-image'?>">
 			                        <div class="inside clear">
 			                            <div class="wrap clear">
@@ -53,12 +61,12 @@ get_header(); ?>
 			                                                //$category_link = get_term_link($cat->term_id); 
 			                                                $category_link = get_site_url() . '/news-events/#' .  $cat->slug;
 			                                                ?>
-			                                                <span><a href="<?php echo $category_link;?>"><?php echo $cat->name; ?></a></span>
+			                                                <span><?php echo $cat->name; ?></span>
 			                                            <?php } ?>
 			                                        </div>
 			                                    <?php } ?>
 			                                    <h2 class="item-title"><?php echo $page_title;?></h2>
-			                                    <div class="excerpt"><?php echo shortenText($content,200); ?></div>
+			                                    <div class="excerpt"><?php echo $excerpt; ?></div>
 			                                    <div class="buttondiv"><a href="<?php echo get_permalink($id); ?>">Read More</a></div>
 			                                </div>
 			                            </div>
