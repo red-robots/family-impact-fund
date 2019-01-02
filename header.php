@@ -51,7 +51,7 @@
 					</div>
 				</div>
 				<div class="linksdiv topdiv">
-					<?php if($member_link) { ?><div><a target="_blank" href="<?php echo $member_link; ?>">Board Member Log-In</a></div><?php } ?>
+					<?php if($member_link) { ?><div><a href="<?php echo $member_link; ?>">Board Member Log-In</a></div><?php } ?>
 					<?php if($subscribe_link) { ?><div><a target="_blank" href="<?php echo $subscribe_link; ?>">Subscribe to Newsletter</a></div><?php } ?>
 					<?php if($contact_link) { ?><div><a href="<?php echo $contact_link; ?>">Contact Us</a></div><?php } ?>
 				</div>
