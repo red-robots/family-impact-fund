@@ -42,7 +42,7 @@ get_header(); ?>
 				</div>
 			</article>
 
-			<article class="response impact">
+			<article id="donor-program" class="response impact">
 				<div class="copy">
 					<h1><?php echo $second_section_title; ?></h1>
 					<?php echo $reports; ?>
